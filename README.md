@@ -1,9 +1,3 @@
-# Awesome-Application-Security-Checklist
-  If you are designing, creating, testing  your web/mobile application with security in mind, this Checklist of counter-measures can be a good starting point 
-
-
-
-
 ##### AUTHENTICATION SYSTEMS (Signup/Signin/2 Factor/Password reset) 
 - [ ] Use HTTPS everywhere.
 - [ ] Store password hashes using `Bcrypt` (no salt necessary - `Bcrypt` does it for you).
@@ -36,16 +30,6 @@
 - [ ]  Use minimal privilege for the database access user account. Don’t use the database root account.
  - [ ] Store and distribute secrets using a key store designed for the purpose. Don’t hard code in your applications.
  - [ ] Fully prevent SQL injection by only using SQL prepared statements. For example: if using NPM, don’t use npm-mysql, use npm-mysql2 which supports prepared statements.
-
-##### ANDROID / IOS APP
-- [ ] `salt` from payment gateways should not be hardcoded.
-- [ ] `secret` / `auth token` from 3rd party SDK's should not be hardcoded.
-- [ ] API calls intended to be done `server to server` should not be done from the app.
-- [ ] In Android, all the granted  [permissions](https://developer.android.com/guide/topics/security/permissions.html) should be carefully evaluated.
-- [ ] On iOS, store sensitive information (authentication tokens, API keys, etc.) in the system keychain. Do __not__ store this kind of information in the user defaults.
-- [ ] [Certificate pinning](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning) is highly recommended.
-
-
 
 ##### SECURITY HEADERS & CONFIGURATIONS
 - [ ] `Add` [CSP](https://en.wikipedia.org/wiki/Content_Security_Policy) header to mitigate XSS and data injection attacks. This is important.
